@@ -1,0 +1,33 @@
+1) To create an image from our Docker File, we have to run docker build (run command from same dir as of Dockerfile)
+
+docker build --tag=message-server:latest 
+
+2)docker build --tag=message-server:latest 
+
+ docker run -p8887:8888 message-server:latest
+ 
+3) If we run the container in detached mode, we can inspect its details, stop it and remove it with the following
+commands:
+
+$> docker inspect message-server
+$> docker stop message-server
+$> docker rm message-server
+
+---------------------------------------------------------------------------------------------------------
+Docker Compose
+---------------------------------------------------------------------------------------------------------
+
+1) check our build-{le for syntax-errors
+
+docker-compose config
+
+2) we can build our images, create the de{ned containers, and start it in one command:
+
+docker-compose up --build
+
+3) To stop the containers, remove them from Docker and remove the connected networks from it, we can use the
+opposite command:
+
+ docker-compose down
+ 
+ 
